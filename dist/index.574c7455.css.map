@@ -1,0 +1,1 @@
+{"mappings":"ACAA;;;;;;ACAA","sources":["scss/main.scss","scss/reset.scss","scss/_base.scss"],"sourcesContent":["@import 'reset';\r\n@import 'colors';\r\n@import 'mixins';\r\n@import 'base';\r\n",null,null],"names":[],"version":3,"file":"index.574c7455.css.map","sourceRoot":"/__parcel_source_root/"}

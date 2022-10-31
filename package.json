@@ -1,0 +1,29 @@
+{
+	"name": "receptariusz",
+	"source": "index.html",
+	"description": "Strona do tworzenia receptur",
+	"version": "1.0.0",
+	"main": "script.js",
+	"dependencies": {
+		"@parcel/transformer-sass": "^2.7.0",
+		"parcel": "^2.7.0",
+		"sass": "^1.55.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "parcel",
+		"build": "parcel build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Taaxuus/Receptariusz.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Taaxuus/Receptariusz/issues"
+	},
+	"homepage": "https://github.com/Taaxuus/Receptariusz#readme"
+}
