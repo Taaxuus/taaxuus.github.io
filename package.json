@@ -1,6 +1,6 @@
 {
 	"name": "receptariusz",
-	"source": "index.html",
+	"source": "./index.html",
 	"description": "Strona do tworzenia receptur",
 	"version": "1.0.0",
 	"main": "script.js",

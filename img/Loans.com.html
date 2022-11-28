@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Loans.com</title>
+  
+  
+  
+  
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="./Loans.com_files/css2" rel="stylesheet"><link rel="stylesheet" href="./Loans.com_files/all.min.css"><link rel="stylesheet" href="./Loans.com_files/reset.css"><link rel="stylesheet" href="./Loans.com_files/style.css"></head>
+
+<body cz-shortcut-listen="true">
+
+  <header class="header container">
+    <a href="http://127.0.0.1:5500/index.html#" class="logo">Loans.com</a>
+
+    <nav class="nav">
+
+      <ul class="nav-list">
+        <li class="nav__item"><a href="http://127.0.0.1:5500/index.html">Rates &amp; Fees</a></li>
+        <li class="nav__item"><a href="http://127.0.0.1:5500/index.html">How to apply</a></li>
+        <li class="nav__item"><a href="http://127.0.0.1:5500/index.html">Questions ?</a></li>
+      </ul>
+    </nav>
+
+
+  </header>
+
+  <main class="main container">
+    <section class="main__intro">
+      <div class="intro__info">
+        <span class="info__small-heading">Personal Loan</span>
+        <h2 class="info__heading">Put your plans<br> into actions.</h2>
+
+        <div class="info__icons">
+          <div class="icons__item">
+            <span class="item__text">Online application</span>
+          </div>
+          <div class="icons__item">
+            <span class="item__text">Up to $50.000</span>
+          </div>
+          <div class="icons__item">
+            <span class="item__text">The money is yours in 48h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro__form">
+        <h3 class="form__heading">Let's change your life?</h3>
+        <form>
+          <div class="form__field">
+            <label for="name">Full name</label>
+            <input type="text" class="form__input" id="name" placeholder="John Doe">
+          </div>
+          <div class="form__field">
+            <label for="email">E-mail</label>
+            <input type="email" class="form__input" id="email" placeholder="john.doe@apple.com">
+          </div>
+          <div class="form__field">
+            <label for="amount">How much do you need?</label>
+            <input type="number" class="form__input" id="amount" placeholder="1.000">
+          </div>
+
+          <button type="submit" class="form__button">Check your rates</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
