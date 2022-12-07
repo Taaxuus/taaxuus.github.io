@@ -1,8 +1,71 @@
+@import 'colors';
+
 body {
-	font-family: 'Josefin Sans', sans-serif;
-	background-image: url(/img/bgi.1.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	font-family: 'Syne Mono', monospace;
+	background-color: $main-color;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+label {
+	font-size: 2rem;
+	text-align: center;
+}
+input[type='checkbox'] {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	background-color: #ccc;
+	&:checked {
+		background-color: #333;
+	}
+}
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+tr {
+	border-bottom: 1px solid $black-color;
+}
+
+th {
+	padding: 1rem;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+td {
+	text-align: center;
+	padding: 1rem;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	height: 2em;
+	width: 10em;
+	background-color: $third-color;
+	border: none;
+	border-radius: 3px;
+	transition: all 0.3s;
+
+	&:hover {
+		box-shadow: 0 0 11px rgba(76, 73, 73, 0.2);
+	}
 }
 
 .wrapper {
@@ -10,6 +73,5 @@ body {
 	justify-content: center;
 	align-items: center;
 	max-width: 1170px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }

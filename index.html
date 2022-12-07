@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Receptariusz</title>
 
 
@@ -19,14 +21,138 @@
 
 
     <header class="header">
+        <div class="wrapper">
+            <h1 class="page-title">ReciptCalc</h1>
+            <p class="program_explications"></p>
+        </div>
+    </header>
+
+    <section class="product">
+        <div class="wrapper">
+            <form class="product__info">
+                <label for="product__name" class="product__name">Nazwa Kremu</label>
+                <input type="text" name="product__name" id="product__name"
+                    placeholder="Tutaj wpisz nazwe swojego kremu">
+
+                <div class="product__btn__list">
+                    <button class="btn product__name__btn">Zapisz</button>
+                    <button class="btn product__name__btn__modifier">Modyfikuj</button>
+                </div>
+                <label for="product__quantity" class="product__quantity">Ilosc twojego kremu</label>
+                <input type="number" name="product__quantity" id="product__quantity"
+                    placeholder="Tutaj wpisu ilosc kremu w gramach">
+
+                <div class="product__btn__list">
+                    <button class="btn product__quantity__btn">Zapisz</button>
+                    <button class="btn product__quantity__btn__modifier">Modyfikuj</button>
+                </div>
+
+                <h2>Fazy produktu :</h2>
+
+                <div class="product__checkbox__list">
+                    <button class="btn product__btn__phase">Faza Olejowa</button>
+                    <button class="btn product__btn__phase">Faza Wodna</button>
+                    <button class="btn product__btn__phase">Faza Dodatkowa</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="phases">
 
         <div class="wrapper">
 
-            <h1 class="page-title">Receptariusz</h1>
+            <div class="phases__card phase1">
+                <table class="card__table phase1__table">
+                    <h2>Faza Olejowa</h2>
+                    <thead>
+                        <tr>
+                            <th>Nazwa skladnika</th>
+                            <th>Ilosc w gramach</th>
+                            <th>Procent calosci produkttu</th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                olej lniany
+                            </td>
+                            <td>
+                                30 gramow
+                            </td>
+                            <td>
+                                100% produktu
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                olej lniany
+                            </td>
+                            <td>
+                                30 gramow
+                            </td>
+                            <td>
+                                100% produktu
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                olej lniany
+                            </td>
+                            <td>
+                                30 gramow
+                            </td>
+                            <td>
+                                100% produktu
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                olej lniany
+                            </td>
+                            <td>
+                                30 gramow
+                            </td>
+                            <td>
+                                100% produktu
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                olej lniany
+                            </td>
+                            <td>
+                                30 gramow
+                            </td>
+                            <td>
+                                100% produktu
+                            </td>
+
+                        </tr>
+                    </thead>
+
+
+                </table>
+
+
+
+
+
+            </div>
+
+
+
+
         </div>
+    </section>
 
 
-    </header>
+
+
 
 
 

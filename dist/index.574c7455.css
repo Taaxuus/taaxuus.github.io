@@ -5,24 +5,66 @@
 }
 
 body {
-  background-image: url("bgi.1.d109ebbc.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: Josefin Sans, sans-serif;
+  background-color: #fefcf3;
+  font-family: Syne Mono, monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  height: 2em;
+  width: 10em;
+  background-color: #f0dbdb;
+  border: none;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  font-size: .6rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.btn:hover {
+  border: .5px solid #000;
+  box-shadow: 0 0 11px #4c494933;
 }
 
 .wrapper {
   max-width: 1170px;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: flex;
 }
 
 .header {
-  height: 120px;
-  backdrop-filter: blur(6px);
+  height: 12vh;
+  display: flex;
+}
+
+.product {
+  background-color: #f5ebe0;
+}
+
+.product__info {
+  flex-direction: column;
+  gap: .5em;
+  padding: 10px;
+  display: flex;
+}
+
+.product__info input {
+  width: 25em;
+  height: 3em;
+  padding-left: 1em;
+  font-size: .6rem;
+}
+
+.product__btn__list {
+  justify-content: center;
+  gap: 1em;
   display: flex;
 }
 
