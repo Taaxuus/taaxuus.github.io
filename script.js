@@ -25,6 +25,8 @@ const productPhaseBtns = document.querySelectorAll('.product__btn__phase');
 //Oil phase card
 
 const oilPhase = document.querySelector('.phase1');
+const waterPhase = document.querySelector('.phase2');
+const extraPhase = document.querySelector('.phase3');
 
 //The amout of ptoduct
 let globalQuantity = '';
@@ -91,17 +93,17 @@ productQuantityBtnModifier.addEventListener('click', quantityModifier);
 productQuantityBtn.addEventListener('click', quantityAdd);
 
 //Phases of product listener
-
+//Open a table depending of phase
 productPhaseBtns.forEach(el => {
 	el.addEventListener('click', function (e) {
 		this.classList.toggle('product__btn__phase--clicked');
-		e.preventDefault();
 
-		if (this.classList.contains('product__btn__phase--clicked') && this.textContent.includes('Faza Olejowa')) {
-			oilPhase.style.display = 'block';
-		} else {
-			oilPhase.style.display = 'none';
-		}
+		if (this.textContent.includes('Faza Olejowa')) {
+			oilPhase.classList.toggle('active-d-none');
+		} else if (this.textContent.includes('Faza Wodna')) {
+			waterPhase.classList.toggle('active-d-none');
+		} else if (this.textContent.includes('Faza Dodatkowa')) extraPhase.classList.toggle('active-d-none');
+		e.preventDefault();
 	});
 });
 

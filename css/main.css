@@ -201,6 +201,10 @@ td {
   margin: 0 auto;
 }
 
+.active-d-none {
+  display: none;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
