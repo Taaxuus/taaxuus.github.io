@@ -141,8 +141,10 @@ const addNewProduct = e => {
 	let cellResult = document.createElement('td');
 	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity} gr`;
 
-	let cellTrash = document.createElement('td');
-	// cellTrash.innerText ="<i class="fa-sharp fa-solid fa-trash"></i>"
+	// let cellTrash = document.createElement('i');
+	// cellTrash.classList.add(`fa-regular fa-trash`);
+	// cellTrash.classList.add(`fa-trash`);
+	// cellResult.appendChild(cellTrash);
 
 	row.appendChild(cellResult);
 	phase1Tabe.appendChild(row);
@@ -152,7 +154,6 @@ const addNewProduct = e => {
 	});
 
 	phase1ProductResult.innerText = '';
-
 	phase1AddBtn.style.display = 'block';
 	phase1AddWindow.style.display = 'none';
 };
