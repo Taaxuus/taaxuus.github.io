@@ -31,19 +31,9 @@ const extraPhase = document.querySelector('.phase3');
 //The amout of ptoduct
 let globalQuantity = '';
 
-//Phase1 card
+//Phase1 btn fot open a adding window
 
 const phase1AddBtn = document.querySelector('.phases__card__btn--1');
-const phase1AddWindow = document.querySelector('.phase1__add__window');
-const phase1AddProductBtn = document.querySelector('.phase1__add__window--btn');
-const phase1AddedProcuctName = document.querySelector('#additem__name-phase1');
-const phase1AddedProcuctQUantity = document.querySelector('#additem__quantity-phase1');
-const phase1AddedProcuctResult = document.querySelector('phase1__add__window--result');
-const phase1Tabe = document.querySelector('.phase1__table');
-const phase1Inputs = document.querySelectorAll('.add__phase1__product');
-const phase1ProductResult = document.querySelector('.phase1__add__window--result');
-const phase1CalculatedBtn = document.querySelector('.phase1__add__window__calculate--btn');
-const phase1CloseBtn = document.querySelector('.phase1__add__window__close--btn');
 
 //name section functions
 const nameAdd = e => {
@@ -121,51 +111,4 @@ productPhaseBtns.forEach(el => {
 	});
 });
 
-//Phase 1 add window
-
-phase1AddBtn.addEventListener('click', function showAddWindow(e) {
-	phase1AddWindow.style.display = 'flex';
-	this.style.display = 'none';
-	e.preventDefault();
-});
-
-const addNewProduct = e => {
-	const row = document.createElement('tr');
-
-	phase1Inputs.forEach(el => {
-		let cell = document.createElement('td');
-		cell.textContent = el.value;
-		row.appendChild(cell);
-	});
-
-	let cellResult = document.createElement('td');
-	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity} gr`;
-
-	let cellTrash = document.createElement('td');
-	// cellTrash.innerText ="<i class="fa-sharp fa-solid fa-trash"></i>"
-
-	row.appendChild(cellResult);
-	phase1Tabe.appendChild(row);
-
-	phase1Inputs.forEach(el => {
-		el.value = '';
-	});
-
-	phase1ProductResult.innerText = '';
-
-	phase1AddBtn.style.display = 'block';
-	phase1AddWindow.style.display = 'none';
-};
-
-const calculateInGr = e => {
-	phase1ProductResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity}`;
-};
-
-phase1CloseBtn.addEventListener('click', function (e) {
-	phase1AddWindow.style.display = 'none';
-	phase1AddBtn.style.display = 'block';
-	e.preventDefault();
-});
-
-phase1AddProductBtn.addEventListener('click', addNewProduct);
-phase1CalculatedBtn.addEventListener('click', calculateInGr);
+//Oil phase

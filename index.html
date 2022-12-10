@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/01ddd1f305.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
@@ -69,23 +68,33 @@
                     <thead>
                         <tr>
                             <th>Nazwa skladnika</th>
+                            <th>Ilosc w % </th>
                             <th>Ilosc w gramach</th>
-                            <th>Procent calosci produkttu</th>
                         </tr>
 
-                        <tr>
-                            <td>
-                                olej lniany
-                            </td>
-                            <td>
-                                30 gramow
-                            </td>
-                            <td>
-                                100% produktu
-                            </td>
-                        </tr>
+
                     </thead>
                 </table>
+
+                <div class="phase1__add__window phases__card__add__window ">
+                    <label for="additem_name">Nazwa produktu</label>
+                    <input type="text" name="additem_name" id="additem__name-phase1" class="add__phase1__product">
+                    <label for="additem_quantity">Ilosc w %</label>
+                    <input type="number" name="additem_quantity" id="additem__quantity-phase1"
+                        class="add__phase1__product">
+                    <button class="btn phase1__add__window__calculate--btn ">Przelicz</button>
+                    <label for="result">Rezultat w gramach</label>
+                    <p class="phase1__add__window--result phases__window__result">0
+                    </p>
+                    <button class="phase1__add__window--btn btn ">Dodaj</button>
+                    <a href="" class="close-btn phase1__add__window__close--btn"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+
+
+
+                <a href="" class="phases__card__btn--1">
+                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                </a>
             </div>
             <div class="phases__card phase2 active-d-none">
                 <table class="card__table phase2__table">
@@ -93,23 +102,16 @@
                     <thead>
                         <tr>
                             <th>Nazwa skladnika</th>
+                            <th>Ilosc w % </th>
                             <th>Ilosc w gramach</th>
-                            <th>Procent calosci produkttu</th>
                         </tr>
 
-                        <tr>
-                            <td>
-                                olej lniany
-                            </td>
-                            <td>
-                                30 gramow
-                            </td>
-                            <td>
-                                100% produktu
-                            </td>
-                        </tr>
+
                     </thead>
                 </table>
+                <a href="" class="phases__card__btn--2">
+                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                </a>
             </div>
             <div class="phases__card phase3 active-d-none">
                 <table class="card__table phase3__table">
@@ -117,8 +119,8 @@
                     <thead>
                         <tr>
                             <th>Nazwa skladnika</th>
+                            <th>Ilosc w % </th>
                             <th>Ilosc w gramach</th>
-                            <th>Procent calosci produkttu</th>
                         </tr>
 
                         <tr>
@@ -134,6 +136,10 @@
                         </tr>
                     </thead>
                 </table>
+
+                <a href="" class="phases__card__btn--3">
+                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                </a>
             </div>
 
 

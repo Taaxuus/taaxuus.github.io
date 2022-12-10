@@ -298,7 +298,6 @@ i:hover {
   text-align: center;
 }
 .phases__card__add__window {
-  position: relative;
   margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,13 +330,4 @@ i:hover {
   border: 2px solid black;
   height: 2em;
   width: 50%;
-}
-.phases .phase1__add__window {
-  display: none;
-}
-.phases .close-btn {
-  position: absolute;
-  top: -4%;
-  left: 91%;
-  font-size: 0.2rem;
 }/*# sourceMappingURL=main.css.map */

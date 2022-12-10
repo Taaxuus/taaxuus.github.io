@@ -51,6 +51,17 @@ td {
 	padding: 1rem;
 }
 
+i {
+	margin-top: 0.5em;
+	font-size: 2.5rem;
+	color: $black-color;
+	transition: all 0.3s;
+
+	&:hover {
+		color: $checked-color;
+	}
+}
+
 .btn {
 	display: flex;
 	align-items: center;
