@@ -332,7 +332,9 @@ i:hover {
   height: 2em;
   width: 50%;
 }
-.phases .phase1__add__window {
+.phases .phase1__add__window,
+.phases .phase2__add__window,
+.phases .phase3__add__window {
   display: none;
 }
 .phases .close-btn {
@@ -340,4 +342,12 @@ i:hover {
   top: -4%;
   left: 91%;
   font-size: 0.2rem;
+}
+.phases .fa-delete-left {
+  font-size: 1.2rem;
+  z-index: -2;
+  padding: 1em;
+}
+.phases .fa-delete-left:hover {
+  color: red;
 }/*# sourceMappingURL=main.css.map */

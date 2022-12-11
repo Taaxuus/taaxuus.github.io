@@ -44,6 +44,35 @@ const phase1Inputs = document.querySelectorAll('.add__phase1__product');
 const phase1ProductResult = document.querySelector('.phase1__add__window--result');
 const phase1CalculatedBtn = document.querySelector('.phase1__add__window__calculate--btn');
 const phase1CloseBtn = document.querySelector('.phase1__add__window__close--btn');
+const phase1DltBtn = document.querySelectorAll('.phase1__del__product');
+//Phase2 card
+
+const phase2AddBtn = document.querySelector('.phases__card__btn--2');
+const phase2AddWindow = document.querySelector('.phase2__add__window');
+const phase2AddProductBtn = document.querySelector('.phase2__add__window--btn');
+const phase2AddedProcuctName = document.querySelector('#additem__name-phase2');
+const phase2AddedProcuctQUantity = document.querySelector('#additem__quantity-phase2');
+const phase2AddedProcuctResult = document.querySelector('phase2__add__window--result');
+const phase2Tabe = document.querySelector('.phase2__table');
+const phase2Inputs = document.querySelectorAll('.add__phase2__product');
+const phase2ProductResult = document.querySelector('.phase2__add__window--result');
+const phase2CalculatedBtn = document.querySelector('.phase2__add__window__calculate--btn');
+const phase2CloseBtn = document.querySelector('.phase2__add__window__close--btn');
+const phase2DltBtn = document.querySelectorAll('.phase2__del__product');
+//Phase3 card
+
+const phase3AddBtn = document.querySelector('.phases__card__btn--3');
+const phase3AddWindow = document.querySelector('.phase3__add__window');
+const phase3AddProductBtn = document.querySelector('.phase3__add__window--btn');
+const phase3AddedProcuctName = document.querySelector('#additem__name-phase3');
+const phase3AddedProcuctQUantity = document.querySelector('#additem__quantity-phase3');
+const phase3AddedProcuctResult = document.querySelector('phase3__add__window--result');
+const phase3Tabe = document.querySelector('.phase3__table');
+const phase3Inputs = document.querySelectorAll('.add__phase3__product');
+const phase3ProductResult = document.querySelector('.phase3__add__window--result');
+const phase3CalculatedBtn = document.querySelector('.phase3__add__window__calculate--btn');
+const phase3CloseBtn = document.querySelector('.phase3__add__window__close--btn');
+const phase3DltBtn = document.querySelectorAll('.phase3__del__product');
 
 //name section functions
 const nameAdd = e => {
@@ -129,25 +158,26 @@ phase1AddBtn.addEventListener('click', function showAddWindow(e) {
 	e.preventDefault();
 });
 
-const addNewProduct = e => {
+const phase1AddNewProduct = e => {
 	const row = document.createElement('tr');
 
 	phase1Inputs.forEach(el => {
 		let cell = document.createElement('td');
 		cell.textContent = el.value;
-		row.appendChild(cell);
+		row.append(cell);
 	});
 
 	let cellResult = document.createElement('td');
 	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity} gr`;
+	//DLT button for each added element
+	let cellTrash = document.createElement('i');
+	cellTrash.className = `fa-solid fa-delete-left`;
+	cellTrash.classList.add(`phase1__del__product`);
+	cellTrash.setAttribute('id', 'phase1__dlt__btn');
+	cellResult.append(cellTrash);
 
-	// let cellTrash = document.createElement('i');
-	// cellTrash.classList.add(`fa-regular fa-trash`);
-	// cellTrash.classList.add(`fa-trash`);
-	// cellResult.appendChild(cellTrash);
-
-	row.appendChild(cellResult);
-	phase1Tabe.appendChild(row);
+	row.append(cellResult);
+	phase1Tabe.append(row);
 
 	phase1Inputs.forEach(el => {
 		el.value = '';
@@ -158,9 +188,11 @@ const addNewProduct = e => {
 	phase1AddWindow.style.display = 'none';
 };
 
-const calculateInGr = e => {
-	phase1ProductResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity}`;
-};
+document.addEventListener('click', function (e) {
+	if (e.target.id === 'phase1__dlt__btn') {
+		e.target.closest('tr').remove();
+	}
+});
 
 phase1CloseBtn.addEventListener('click', function (e) {
 	phase1AddWindow.style.display = 'none';
@@ -168,5 +200,144 @@ phase1CloseBtn.addEventListener('click', function (e) {
 	e.preventDefault();
 });
 
-phase1AddProductBtn.addEventListener('click', addNewProduct);
-phase1CalculatedBtn.addEventListener('click', calculateInGr);
+//Calculate a % en global quality
+const phase1CalculateInGr = e => {
+	phase1ProductResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity}`;
+};
+
+phase1DltBtn.forEach(el => {
+	el.addEventListener('click', function (e) {
+		this.closest('tr').remove();
+	});
+});
+
+phase1AddProductBtn.addEventListener('click', phase1AddNewProduct);
+phase1CalculatedBtn.addEventListener('click', phase1CalculateInGr);
+
+//Phase 2 add window
+
+phase2AddBtn.addEventListener('click', function showAddWindow(e) {
+	phase2AddWindow.style.display = 'flex';
+	this.style.display = 'none';
+	e.preventDefault();
+});
+
+const phase2AddNewProduct = e => {
+	const row = document.createElement('tr');
+
+	phase2Inputs.forEach(el => {
+		let cell = document.createElement('td');
+		cell.textContent = el.value;
+		row.append(cell);
+	});
+
+	let cellResult = document.createElement('td');
+	cellResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity} gr`;
+	//DLT button for each added element
+	let cellTrash = document.createElement('i');
+	cellTrash.className = `fa-solid fa-delete-left`;
+	cellTrash.classList.add(`phase2__del__product`);
+	cellTrash.setAttribute('id', 'phase2__dlt__btn');
+	cellResult.append(cellTrash);
+
+	row.append(cellResult);
+	phase2Tabe.append(row);
+
+	phase2Inputs.forEach(el => {
+		el.value = '';
+	});
+
+	phase2ProductResult.innerText = '';
+	phase2AddBtn.style.display = 'block';
+	phase2AddWindow.style.display = 'none';
+};
+
+document.addEventListener('click', function (e) {
+	if (e.target.id === 'phase2__dlt__btn') {
+		e.target.closest('tr').remove();
+	}
+});
+
+phase2CloseBtn.addEventListener('click', function (e) {
+	phase2AddWindow.style.display = 'none';
+	phase2AddBtn.style.display = 'block';
+	e.preventDefault();
+});
+
+//Calculate a % en global quality
+const phase2CalculateInGr = e => {
+	phase2ProductResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity}`;
+};
+
+phase2DltBtn.forEach(el => {
+	el.addEventListener('click', function (e) {
+		this.closest('tr').remove();
+	});
+});
+
+phase2AddProductBtn.addEventListener('click', phase2AddNewProduct);
+phase2CalculatedBtn.addEventListener('click', phase2CalculateInGr);
+
+//Phase 3 add window
+
+phase3AddBtn.addEventListener('click', function showAddWindow(e) {
+	phase3AddWindow.style.display = 'flex';
+	this.style.display = 'none';
+	e.preventDefault();
+});
+
+const phase3AddNewProduct = e => {
+	const row = document.createElement('tr');
+
+	phase3Inputs.forEach(el => {
+		let cell = document.createElement('td');
+		cell.textContent = el.value;
+		row.append(cell);
+	});
+
+	let cellResult = document.createElement('td');
+	cellResult.innerText = `${(phase3Inputs[1].value / 100) * globalQuantity} gr`;
+	//DLT button for each added element
+	let cellTrash = document.createElement('i');
+	cellTrash.className = `fa-solid fa-delete-left`;
+	cellTrash.classList.add(`phase3__del__product`);
+	cellTrash.setAttribute('id', 'phase3__dlt__btn');
+	cellResult.append(cellTrash);
+
+	row.append(cellResult);
+	phase3Tabe.append(row);
+
+	phase3Inputs.forEach(el => {
+		el.value = '';
+	});
+
+	phase3ProductResult.innerText = '';
+	phase3AddBtn.style.display = 'block';
+	phase3AddWindow.style.display = 'none';
+};
+
+document.addEventListener('click', function (e) {
+	if (e.target.id === 'phase3__dlt__btn') {
+		e.target.closest('tr').remove();
+	}
+});
+
+phase3CloseBtn.addEventListener('click', function (e) {
+	phase3AddWindow.style.display = 'none';
+	phase3AddBtn.style.display = 'block';
+	e.preventDefault();
+});
+
+//Calculate a % en global quality
+const phase3CalculateInGr = e => {
+	phase3ProductResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity}`;
+};
+
+phase3DltBtn.forEach(el => {
+	el.addEventListener('click', function (e) {
+		this.closest('tr').remove();
+	});
+});
+
+phase3AddProductBtn.addEventListener('click', phase3AddNewProduct);
+phase3CalculatedBtn.addEventListener('click', phase3CalculateInGr);
