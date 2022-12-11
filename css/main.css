@@ -205,9 +205,6 @@ i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -350,4 +347,11 @@ i:hover {
 }
 .phases .fa-delete-left:hover {
   color: red;
+}
+.phases .phases__quantity {
+  margin-top: 1em;
+}
+.phases .phases__quantity span {
+  color: #000;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

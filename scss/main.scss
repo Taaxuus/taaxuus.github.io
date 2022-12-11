@@ -118,4 +118,13 @@
 			color: red;
 		}
 	}
+
+	.phases__quantity {
+		margin-top: 1em;
+
+		span {
+			color: $black-color;
+			font-size: 1.5rem;
+		}
+	}
 }

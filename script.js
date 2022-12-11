@@ -45,6 +45,7 @@ const phase1ProductResult = document.querySelector('.phase1__add__window--result
 const phase1CalculatedBtn = document.querySelector('.phase1__add__window__calculate--btn');
 const phase1CloseBtn = document.querySelector('.phase1__add__window__close--btn');
 const phase1DltBtn = document.querySelectorAll('.phase1__del__product');
+const phase1GlobalQuantity = document.querySelector('.phase1__global__quantity');
 //Phase2 card
 
 const phase2AddBtn = document.querySelector('.phases__card__btn--2');
@@ -59,6 +60,7 @@ const phase2ProductResult = document.querySelector('.phase2__add__window--result
 const phase2CalculatedBtn = document.querySelector('.phase2__add__window__calculate--btn');
 const phase2CloseBtn = document.querySelector('.phase2__add__window__close--btn');
 const phase2DltBtn = document.querySelectorAll('.phase2__del__product');
+const phase2GlobalQuantity = document.querySelector('.phase2__global__quantity');
 //Phase3 card
 
 const phase3AddBtn = document.querySelector('.phases__card__btn--3');
@@ -73,6 +75,7 @@ const phase3ProductResult = document.querySelector('.phase3__add__window--result
 const phase3CalculatedBtn = document.querySelector('.phase3__add__window__calculate--btn');
 const phase3CloseBtn = document.querySelector('.phase3__add__window__close--btn');
 const phase3DltBtn = document.querySelectorAll('.phase3__del__product');
+const phase3GlobalQuantity = document.querySelector('.phase3__global__quantity');
 
 //name section functions
 const nameAdd = e => {
@@ -158,6 +161,9 @@ phase1AddBtn.addEventListener('click', function showAddWindow(e) {
 	e.preventDefault();
 });
 
+let sumPhase1 = 0;
+let sumPhase2 = 0;
+let sumPhase3 = 0;
 const phase1AddNewProduct = e => {
 	const row = document.createElement('tr');
 
@@ -178,6 +184,8 @@ const phase1AddNewProduct = e => {
 
 	row.append(cellResult);
 	phase1Tabe.append(row);
+	sumPhase1 += parseFloat(phase1Inputs[1].value);
+	phase1GlobalQuantity.innerText = `${sumPhase1}%`;
 
 	phase1Inputs.forEach(el => {
 		el.value = '';
@@ -190,6 +198,8 @@ const phase1AddNewProduct = e => {
 
 document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase1__dlt__btn') {
+		sumPhase1 -= parseFloat(e.target.closest('tr').children[1].innerText);
+		phase1GlobalQuantity.innerText = `${sumPhase1}%`;
 		e.target.closest('tr').remove();
 	}
 });
@@ -204,12 +214,6 @@ phase1CloseBtn.addEventListener('click', function (e) {
 const phase1CalculateInGr = e => {
 	phase1ProductResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity}`;
 };
-
-phase1DltBtn.forEach(el => {
-	el.addEventListener('click', function (e) {
-		this.closest('tr').remove();
-	});
-});
 
 phase1AddProductBtn.addEventListener('click', phase1AddNewProduct);
 phase1CalculatedBtn.addEventListener('click', phase1CalculateInGr);
@@ -243,6 +247,9 @@ const phase2AddNewProduct = e => {
 	row.append(cellResult);
 	phase2Tabe.append(row);
 
+	sumPhase2 += parseFloat(phase2Inputs[1].value);
+	phase2GlobalQuantity.innerText = `${sumPhase2}%`;
+
 	phase2Inputs.forEach(el => {
 		el.value = '';
 	});
@@ -254,6 +261,8 @@ const phase2AddNewProduct = e => {
 
 document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase2__dlt__btn') {
+		sumPhase2 -= parseFloat(e.target.closest('tr').children[1].innerText);
+		phase2GlobalQuantity.innerText = `${sumPhase2}%`;
 		e.target.closest('tr').remove();
 	}
 });
@@ -268,12 +277,6 @@ phase2CloseBtn.addEventListener('click', function (e) {
 const phase2CalculateInGr = e => {
 	phase2ProductResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity}`;
 };
-
-phase2DltBtn.forEach(el => {
-	el.addEventListener('click', function (e) {
-		this.closest('tr').remove();
-	});
-});
 
 phase2AddProductBtn.addEventListener('click', phase2AddNewProduct);
 phase2CalculatedBtn.addEventListener('click', phase2CalculateInGr);
@@ -307,6 +310,9 @@ const phase3AddNewProduct = e => {
 	row.append(cellResult);
 	phase3Tabe.append(row);
 
+	sumPhase3 += parseFloat(phase3Inputs[1].value);
+	phase3GlobalQuantity.innerText = `${sumPhase3}%`;
+
 	phase3Inputs.forEach(el => {
 		el.value = '';
 	});
@@ -318,6 +324,8 @@ const phase3AddNewProduct = e => {
 
 document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase3__dlt__btn') {
+		sumPhase3 -= parseFloat(e.target.closest('tr').children[1].innerText);
+		phase3GlobalQuantity.innerText = `${sumPhase3}%`;
 		e.target.closest('tr').remove();
 	}
 });
@@ -330,14 +338,8 @@ phase3CloseBtn.addEventListener('click', function (e) {
 
 //Calculate a % en global quality
 const phase3CalculateInGr = e => {
-	phase3ProductResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity}`;
+	phase3ProductResult.innerText = `${(phase3Inputs[1].value / 100) * globalQuantity}`;
 };
-
-phase3DltBtn.forEach(el => {
-	el.addEventListener('click', function (e) {
-		this.closest('tr').remove();
-	});
-});
 
 phase3AddProductBtn.addEventListener('click', phase3AddNewProduct);
 phase3CalculatedBtn.addEventListener('click', phase3CalculateInGr);
