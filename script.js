@@ -236,7 +236,7 @@ const phase2AddNewProduct = e => {
 	});
 
 	let cellResult = document.createElement('td');
-	cellResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity} gr`;
+	cellResult.innerText = `${((phase2Inputs[1].value / 100) * globalQuantity).toFixed(2)} gr`;
 	//DLT button for each added element
 	let cellTrash = document.createElement('i');
 	cellTrash.className = `fa-solid fa-delete-left`;
@@ -275,7 +275,7 @@ phase2CloseBtn.addEventListener('click', function (e) {
 
 //Calculate a % en global quality
 const phase2CalculateInGr = e => {
-	phase2ProductResult.innerText = `${(phase2Inputs[1].value / 100) * globalQuantity}`;
+	phase2ProductResult.innerText = `${((phase2Inputs[1].value / 100) * globalQuantity).toFixed(2)}`;
 };
 
 phase2AddProductBtn.addEventListener('click', phase2AddNewProduct);
