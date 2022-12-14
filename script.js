@@ -31,10 +31,6 @@ const extraPhase = document.querySelector('.phase3');
 //Sum of all phases
 let sumOfAllPhases = document.querySelector('.sumOfAllPhases__value');
 
-// all rows with data
-
-let allRows = [];
-
 //Phase1 card
 
 const phase1AddBtn = document.querySelector('.phases__card__btn--1');
@@ -90,6 +86,9 @@ let sumPhase3 = 0;
 // All phases sum
 let globalProductSum = '';
 
+// all rows with data
+
+let allRows = [];
 //name section functions
 const nameAdd = e => {
 	e.preventDefault();
