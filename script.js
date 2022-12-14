@@ -424,8 +424,7 @@ productQuantityBtn.addEventListener('click', function (e) {
 	if (allRows.length >= 1) {
 		allRows.forEach(el => {
 			el.children[2].innerText = `
-			${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)}
-			 gr`;
+			${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)} gr`;
 		});
 	}
 });
