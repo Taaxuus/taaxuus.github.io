@@ -28,8 +28,8 @@ const oilPhase = document.querySelector('.phase1');
 const waterPhase = document.querySelector('.phase2');
 const extraPhase = document.querySelector('.phase3');
 
-//The amout of ptoduct
-let globalQuantity = '';
+//Sum of all phases
+let sumOfAllPhases = document.querySelector('.sumOfAllPhases__value');
 
 //Phase1 card
 
@@ -76,6 +76,15 @@ const phase3CalculatedBtn = document.querySelector('.phase3__add__window__calcul
 const phase3CloseBtn = document.querySelector('.phase3__add__window__close--btn');
 const phase3DltBtn = document.querySelectorAll('.phase3__del__product');
 const phase3GlobalQuantity = document.querySelector('.phase3__global__quantity');
+
+//The amout of ptoduct
+let globalQuantity = '';
+// sum per phase
+let sumPhase1 = 0;
+let sumPhase2 = 0;
+let sumPhase3 = 0;
+// All phases sum
+let globalProductSum = '';
 
 //name section functions
 const nameAdd = e => {
@@ -161,9 +170,6 @@ phase1AddBtn.addEventListener('click', function showAddWindow(e) {
 	e.preventDefault();
 });
 
-let sumPhase1 = 0;
-let sumPhase2 = 0;
-let sumPhase3 = 0;
 const phase1AddNewProduct = e => {
 	const row = document.createElement('tr');
 
@@ -184,9 +190,20 @@ const phase1AddNewProduct = e => {
 
 	row.append(cellResult);
 	phase1Tabe.append(row);
-	sumPhase1 += parseFloat(phase1Inputs[1].value);
-	phase1GlobalQuantity.innerText = `${sumPhase1}%`;
 
+	sumPhase1 += parseFloat(phase1Inputs[1].value);
+	globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+	phase1GlobalQuantity.innerText = `${sumPhase1}%`;
+	sumOfAllPhases.textContent = `Suma wszystkich faz wynosi ${globalProductSum}%`;
+
+	if (globalProductSum > 100) {
+		sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+		sumOfAllPhases.style.color = 'red';
+	} else if (globalProductSum === 100) {
+		sumOfAllPhases.style.color = 'green';
+	} else {
+		sumOfAllPhases.style.color = 'black';
+	}
 	phase1Inputs.forEach(el => {
 		el.value = '';
 	});
@@ -200,6 +217,16 @@ document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase1__dlt__btn') {
 		sumPhase1 -= parseFloat(e.target.closest('tr').children[1].innerText);
 		phase1GlobalQuantity.innerText = `${sumPhase1}%`;
+		globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+		sumOfAllPhases.textContent = `Suma wszystkich faz wynosi ${globalProductSum}%`;
+		if (globalProductSum > 100) {
+			sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+			sumOfAllPhases.style.color = 'red';
+		} else if (globalProductSum === 100) {
+			sumOfAllPhases.style.color = 'green';
+		} else {
+			sumOfAllPhases.style.color = 'black';
+		}
 		e.target.closest('tr').remove();
 	}
 });
@@ -248,7 +275,17 @@ const phase2AddNewProduct = e => {
 	phase2Tabe.append(row);
 
 	sumPhase2 += parseFloat(phase2Inputs[1].value);
+	globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+	sumOfAllPhases.textContent = `Suma wszystkich faz wynosi ${globalProductSum}%`;
 	phase2GlobalQuantity.innerText = `${sumPhase2}%`;
+	if (globalProductSum > 100) {
+		sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+		sumOfAllPhases.style.color = 'red';
+	} else if (globalProductSum === 100) {
+		sumOfAllPhases.style.color = 'green';
+	} else {
+		sumOfAllPhases.style.color = 'black';
+	}
 
 	phase2Inputs.forEach(el => {
 		el.value = '';
@@ -263,6 +300,16 @@ document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase2__dlt__btn') {
 		sumPhase2 -= parseFloat(e.target.closest('tr').children[1].innerText);
 		phase2GlobalQuantity.innerText = `${sumPhase2}%`;
+		globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+		sumOfAllPhases.textContent = `Suma wszystkich faz wynosi ${globalProductSum}%`;
+		if (globalProductSum > 100) {
+			sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+			sumOfAllPhases.style.color = 'red';
+		} else if (globalProductSum === 100) {
+			sumOfAllPhases.style.color = 'green';
+		} else {
+			sumOfAllPhases.style.color = 'black';
+		}
 		e.target.closest('tr').remove();
 	}
 });
@@ -311,7 +358,18 @@ const phase3AddNewProduct = e => {
 	phase3Tabe.append(row);
 
 	sumPhase3 += parseFloat(phase3Inputs[1].value);
+	globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+	sumOfAllPhases.textContent = `Suma wszystkich faz wynosi ${globalProductSum}%`;
 	phase3GlobalQuantity.innerText = `${sumPhase3}%`;
+
+	if (globalProductSum > 100) {
+		sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+		sumOfAllPhases.style.color = 'red';
+	} else if (globalProductSum === 100) {
+		sumOfAllPhases.style.color = 'green';
+	} else {
+		sumOfAllPhases.style.color = 'black';
+	}
 
 	phase3Inputs.forEach(el => {
 		el.value = '';
@@ -326,6 +384,16 @@ document.addEventListener('click', function (e) {
 	if (e.target.id === 'phase3__dlt__btn') {
 		sumPhase3 -= parseFloat(e.target.closest('tr').children[1].innerText);
 		phase3GlobalQuantity.innerText = `${sumPhase3}%`;
+		globalProductSum = sumPhase1 + sumPhase2 + sumPhase3;
+		sumOfAllPhases.textContent = ` Suma wszystkich faz wynosi ${globalProductSum}%`;
+		if (globalProductSum > 100) {
+			sumOfAllPhases.textContent = 'Suma wszystkich faz przekroczyla 100%';
+			sumOfAllPhases.style.color = 'red';
+		} else if (globalProductSum === 100) {
+			sumOfAllPhases.style.color = 'green';
+		} else {
+			sumOfAllPhases.style.color = 'black';
+		}
 		e.target.closest('tr').remove();
 	}
 });

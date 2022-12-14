@@ -274,6 +274,22 @@ i:hover {
   border: 3px solid #000;
   background-color: #b6e2a1;
 }
+.product__sumOfAllPhases {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.product__sumOfAllPhases span {
+  font-size: 2rem;
+  margin-left: 1em;
+}
 
 .phases .wrapper {
   display: -webkit-box;

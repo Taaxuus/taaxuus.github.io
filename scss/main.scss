@@ -52,6 +52,18 @@
 		border: 3px solid $black-color;
 		background-color: $checked-color;
 	}
+
+	&__sumOfAllPhases {
+		margin-top: 2em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			font-size: 2rem;
+			margin-left: 1em;
+		}
+	}
 }
 //Section 2 phases
 
