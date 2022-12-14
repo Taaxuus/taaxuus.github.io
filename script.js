@@ -87,7 +87,6 @@ let sumPhase3 = 0;
 let globalProductSum = '';
 
 // all rows with data
-
 let allRows = [];
 //name section functions
 const nameAdd = e => {
@@ -423,8 +422,7 @@ phase3CalculatedBtn.addEventListener('click', phase3CalculateInGr);
 productQuantityBtn.addEventListener('click', function (e) {
 	if (allRows.length >= 1) {
 		allRows.forEach(el => {
-			el.children[2].innerText = `
-			${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)} gr`;
+			el.children[2].innerText = `${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)} gr`;
 		});
 	}
 });
