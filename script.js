@@ -31,6 +31,10 @@ const extraPhase = document.querySelector('.phase3');
 //Sum of all phases
 let sumOfAllPhases = document.querySelector('.sumOfAllPhases__value');
 
+// all rows with data
+
+let allRows = [];
+
 //Phase1 card
 
 const phase1AddBtn = document.querySelector('.phases__card__btn--1');
@@ -186,9 +190,8 @@ const phase1AddNewProduct = e => {
 	cellTrash.className = `fa-solid fa-delete-left`;
 	cellTrash.classList.add(`phase1__del__product`);
 	cellTrash.setAttribute('id', 'phase1__dlt__btn');
-	cellResult.append(cellTrash);
-
 	row.append(cellResult);
+	row.append(cellTrash);
 	phase1Tabe.append(row);
 
 	sumPhase1 += parseFloat(phase1Inputs[1].value);
@@ -204,6 +207,7 @@ const phase1AddNewProduct = e => {
 	} else {
 		sumOfAllPhases.style.color = 'black';
 	}
+	allRows.push(row);
 	phase1Inputs.forEach(el => {
 		el.value = '';
 	});
@@ -269,9 +273,9 @@ const phase2AddNewProduct = e => {
 	cellTrash.className = `fa-solid fa-delete-left`;
 	cellTrash.classList.add(`phase2__del__product`);
 	cellTrash.setAttribute('id', 'phase2__dlt__btn');
-	cellResult.append(cellTrash);
-
 	row.append(cellResult);
+	row.append(cellTrash);
+
 	phase2Tabe.append(row);
 
 	sumPhase2 += parseFloat(phase2Inputs[1].value);
@@ -287,6 +291,7 @@ const phase2AddNewProduct = e => {
 		sumOfAllPhases.style.color = 'black';
 	}
 
+	allRows.push(row);
 	phase2Inputs.forEach(el => {
 		el.value = '';
 	});
@@ -352,9 +357,9 @@ const phase3AddNewProduct = e => {
 	cellTrash.className = `fa-solid fa-delete-left`;
 	cellTrash.classList.add(`phase3__del__product`);
 	cellTrash.setAttribute('id', 'phase3__dlt__btn');
-	cellResult.append(cellTrash);
-
 	row.append(cellResult);
+	row.append(cellTrash);
+
 	phase3Tabe.append(row);
 
 	sumPhase3 += parseFloat(phase3Inputs[1].value);
@@ -370,6 +375,8 @@ const phase3AddNewProduct = e => {
 	} else {
 		sumOfAllPhases.style.color = 'black';
 	}
+
+	allRows.push(row);
 
 	phase3Inputs.forEach(el => {
 		el.value = '';
@@ -411,3 +418,15 @@ const phase3CalculateInGr = e => {
 
 phase3AddProductBtn.addEventListener('click', phase3AddNewProduct);
 phase3CalculatedBtn.addEventListener('click', phase3CalculateInGr);
+
+//change values with modifier of globalquantity
+
+productQuantityBtn.addEventListener('click', function (e) {
+	if (allRows.length >= 1) {
+		allRows.forEach(el => {
+			el.children[2].innerText = `
+			${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)};
+			 gr`;
+		});
+	}
+});
