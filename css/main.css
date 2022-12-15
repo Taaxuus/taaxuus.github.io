@@ -185,11 +185,10 @@ i:hover {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.3rem;
-  height: 2em;
-  width: 10em;
+  padding: 0.5em 1em;
   background-color: #f0dbdb;
   border: none;
-  border-radius: 3px;
+  border-radius: 8px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -295,9 +294,6 @@ i:hover {
 }
 
 .phases .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1em;
@@ -373,4 +369,27 @@ i:hover {
 .phases .phases__quantity span {
   color: #000;
   font-size: 1.5rem;
+}
+
+.product__list {
+  background-color: #f5ebe0;
+}
+.product__list .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+.product__list .wrapper .product__global__list--btn {
+  margin-top: 1em;
+}
+.product__list .table__card {
+  background-color: white;
+}
+.product__list .table__card h2 {
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */

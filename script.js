@@ -31,6 +31,14 @@ const extraPhase = document.querySelector('.phase3');
 //Sum of all phases
 let sumOfAllPhases = document.querySelector('.sumOfAllPhases__value');
 
+//glbal list btn
+
+const globalListBtn = document.querySelector('.product__global__list--btn');
+
+//global list table
+
+let globalListTable = document.querySelector('.table__card__final__table');
+
 //Phase1 card
 
 const phase1AddBtn = document.querySelector('.phases__card__btn--1');
@@ -425,4 +433,15 @@ productQuantityBtn.addEventListener('click', function (e) {
 			el.children[2].innerText = `${((parseFloat(el.children[1].textContent) / 100) * globalQuantity).toFixed(2)} gr`;
 		});
 	}
+});
+
+// add all rows to a global list table
+
+globalListBtn.addEventListener('click', function (e) {
+	allRows.forEach(el => {
+		let globalListeEl = el.cloneNode(true);
+		globalListeEl.children[3].remove();
+
+		globalListTable.append(globalListeEl);
+	});
 });

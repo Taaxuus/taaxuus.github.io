@@ -69,8 +69,10 @@
 //Section 2 phases
 
 .phases {
+	// display: flex;
+
 	.wrapper {
-		display: flex;
+		// display: flex;
 		flex-wrap: wrap;
 		gap: 1em;
 	}
@@ -139,6 +141,29 @@
 		span {
 			color: $black-color;
 			font-size: 1.5rem;
+		}
+	}
+}
+
+// section 3 product list
+
+.product__list {
+	background-color: $second-color;
+
+	.wrapper {
+		flex-direction: column;
+		align-items: center;
+		gap: 2em;
+
+		.product__global__list--btn {
+			margin-top: 1em;
+		}
+	}
+
+	.table__card {
+		background-color: $white-color;
+		h2 {
+			font-size: 2rem;
 		}
 	}
 }
