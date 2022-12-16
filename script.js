@@ -438,10 +438,19 @@ productQuantityBtn.addEventListener('click', function (e) {
 // add all rows to a global list table
 
 globalListBtn.addEventListener('click', function (e) {
+	allRows.sort(function (row1, row2) {
+		const cellA = row1.cells[1].textContent;
+		const cellB = row2.cells[1].textContent;
+		return cellB - cellA;
+	});
+
+	allRows.forEach(el => {
+		console.log(el.cells[1].textContent);
+	});
+
 	allRows.forEach(el => {
 		let globalListeEl = el.cloneNode(true);
 		globalListeEl.children[3].remove();
-
 		globalListTable.append(globalListeEl);
 	});
 });
