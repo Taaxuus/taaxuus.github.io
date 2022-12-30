@@ -168,7 +168,9 @@ productPhaseBtns.forEach(el => {
 			oilPhase.classList.toggle('active-d-none');
 		} else if (this.textContent.includes('Faza Wodna')) {
 			waterPhase.classList.toggle('active-d-none');
-		} else if (this.textContent.includes('Faza Dodatkowa')) extraPhase.classList.toggle('active-d-none');
+		} else if (this.textContent.includes('Faza Dodatkowa')) {
+			extraPhase.classList.toggle('active-d-none');
+		}
 		e.preventDefault();
 	});
 });
