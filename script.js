@@ -34,6 +34,7 @@ let sumOfAllPhases = document.querySelector('.sumOfAllPhases__value');
 //glbal list btn
 
 const globalListBtn = document.querySelector('.product__global__list--btn');
+const globalListRefreshBtn = document.querySelector('.product__global__list--refresch--btn');
 
 //global list table
 
@@ -435,7 +436,7 @@ productQuantityBtn.addEventListener('click', function (e) {
 	}
 });
 
-// add all rows to a global list table
+// add all rows to a global list table from bigget % to lover %
 
 globalListBtn.addEventListener('click', function (e) {
 	allRows.sort(function (row1, row2) {
@@ -453,4 +454,6 @@ globalListBtn.addEventListener('click', function (e) {
 		globalListeEl.children[3].remove();
 		globalListTable.append(globalListeEl);
 	});
+
+	globalListBtn.style.display = 'none';
 });
