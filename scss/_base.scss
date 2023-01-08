@@ -22,18 +22,32 @@ label {
 	color: $white-color;
 }
 h2 {
-	color: #3b3c45;
+	color: $white-color;
 }
+
+p {
+	color: $white-color;
+}
+
 input[type='checkbox'] {
 	appearance: none;
 	margin: 0;
 	padding: 0;
 	width: 20px;
 	height: 20px;
-	background-color: #ccc;
+	background-color: rgb(200, 9, 9);
 	&:checked {
 		background-color: #333;
 	}
+}
+
+span {
+	color: $white-color;
+}
+
+input {
+	background-color: $white-color;
+	border-radius: 30px;
 }
 thead {
 	display: table-header-group;
@@ -42,11 +56,12 @@ thead {
 }
 
 tr {
-	border-bottom: 1px solid $black-color;
+	border-bottom: 1px solid $white-color;
 }
 
 th {
 	padding: 1rem;
+	color: $white-color;
 
 	&:first-child {
 		padding-left: 0;
@@ -60,12 +75,13 @@ th {
 td {
 	padding: 1rem;
 	min-width: 4em;
+	color: $white-color;
 }
 
 i {
 	margin-top: 0.5em;
 	font-size: 2.5rem;
-	color: #3b3c45;
+	color: $white-color;
 	transition: all 0.3s;
 
 	&:hover {

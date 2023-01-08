@@ -86,6 +86,8 @@ const phase3CloseBtn = document.querySelector('.phase3__add__window__close--btn'
 const phase3DltBtn = document.querySelectorAll('.phase3__del__product');
 const phase3GlobalQuantity = document.querySelector('.phase3__global__quantity');
 
+const finalCardTable = document.querySelector('#final-table');
+
 //The amout of ptoduct
 let globalQuantity = '';
 // sum per phase
@@ -102,7 +104,7 @@ const nameAdd = e => {
 	e.preventDefault();
 
 	if (productNameInput.value !== '') {
-		productNameText.textContent = `Nazwa twojego kremu to "${productNameInput.value}"`;
+		productNameText.textContent = `${productNameInput.value}`;
 		productNameInput.style.display = 'none';
 		productNameInput.value = '';
 		productNameText.style.color = '';
@@ -128,7 +130,7 @@ const quantityAdd = e => {
 	e.preventDefault();
 
 	if (productQuantityInput.value !== '') {
-		productQuantityText.textContent = `Ilosc twojego kremu (100%) wynosi : "${productQuantityInput.value} gramow"`;
+		productQuantityText.textContent = `${productQuantityInput.value} gramow`;
 		globalQuantity = productQuantityInput.value;
 		productQuantityInput.value = '';
 		productQuantityText.style.color = '';
@@ -214,7 +216,7 @@ const phase1AddNewProduct = e => {
 	} else if (globalProductSum === 100) {
 		sumOfAllPhases.style.color = 'green';
 	} else {
-		sumOfAllPhases.style.color = 'black';
+		sumOfAllPhases.style.color = '#fbfafa';
 	}
 	allRows.push(row);
 	phase1Inputs.forEach(el => {
@@ -440,6 +442,8 @@ productQuantityBtn.addEventListener('click', function (e) {
 
 // add all rows to a global list table from bigget % to lover %
 
+finalCardTable.style.display = 'none';
+
 globalListBtn.addEventListener('click', function (e) {
 	allRows.sort(function (row1, row2) {
 		const cellA = row1.cells[1].textContent;
@@ -458,4 +462,30 @@ globalListBtn.addEventListener('click', function (e) {
 	});
 
 	globalListBtn.style.display = 'none';
+	finalCardTable.style.display = 'flex';
+});
+
+globalListRefreshBtn.addEventListener('click', function (e) {
+	globalListTable.forEach(el => {
+		globalListTable.removeChild(el);
+	});
+
+	allRows.sort(function (row1, row2) {
+		const cellA = row1.cells[1].textContent;
+		const cellB = row2.cells[1].textContent;
+		return cellB - cellA;
+	});
+
+	allRows.forEach(el => {
+		console.log(el.cells[1].textContent);
+	});
+
+	allRows.forEach(el => {
+		let globalListeEl = el.cloneNode(true);
+		globalListeEl.children[3].remove();
+		globalListTable.append(globalListeEl);
+	});
+
+	globalListBtn.style.display = 'none';
+	finalCardTable.style.display = 'flex';
 });

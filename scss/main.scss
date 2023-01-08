@@ -54,8 +54,13 @@
 	}
 	//class to add on listener "toggle"
 	&__btn__phase--clicked {
-		border: 3px solid $black-color;
-		background-color: $checked-color;
+		/* From https://css.glass */
+		background: rgba(184, 108, 184, 0.62);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(128, 43, 128, 0.3);
 	}
 
 	&__sumOfAllPhases {
@@ -63,6 +68,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: $white-color;
 
 		span {
 			font-size: 2rem;
@@ -73,7 +79,9 @@
 //Section 2 phases
 
 .phases {
-	// display: flex;
+	.sumOfAllPhases__value {
+		color: $white-color;
+	}
 
 	.wrapper {
 		// display: flex;
@@ -85,7 +93,13 @@
 		text-align: center;
 		padding: 1.2rem;
 		margin-top: 1rem;
-		background-color: $white-color;
+		/* From https://css.glass */
+		background: rgba(10, 9, 9, 0.62);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(10, 9, 9, 0.3);
 		border-radius: 4px;
 
 		h2 {
@@ -102,7 +116,11 @@
 		align-items: center;
 		gap: 1.2em;
 		padding: 1em;
-		background-color: $second-color;
+		background: rgba(8, 8, 8, 0.62);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 		box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
 	}
 
@@ -124,9 +142,9 @@
 
 	.close-btn {
 		position: absolute;
-		top: -4%;
-		left: 91%;
-		font-size: 0.2rem;
+		top: -3%;
+		left: 90%;
+		font-size: 0.1rem;
 	}
 
 	.fa-delete-left {
@@ -165,9 +183,19 @@
 	}
 
 	.table__card {
-		background-color: $white-color;
+		/* From https://css.glass */
+		background: rgba(0, 0, 0, 0.65);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border: 1px solid rgba(0, 0, 0, 0.3);
 		h2 {
 			font-size: 2rem;
 		}
 	}
+}
+
+.product__global__list--refresch--btn {
+	margin-top: 2rem;
 }
