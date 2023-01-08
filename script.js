@@ -247,6 +247,7 @@ document.addEventListener('click', function (e) {
 			sumOfAllPhases.style.color = 'black';
 		}
 		e.target.closest('tr').remove();
+		allRows.pop();
 	}
 });
 
@@ -331,6 +332,7 @@ document.addEventListener('click', function (e) {
 			sumOfAllPhases.style.color = 'black';
 		}
 		e.target.closest('tr').remove();
+		allRows.pop();
 	}
 });
 
@@ -417,6 +419,7 @@ document.addEventListener('click', function (e) {
 			sumOfAllPhases.style.color = 'black';
 		}
 		e.target.closest('tr').remove();
+		allRows.pop();
 	}
 });
 
