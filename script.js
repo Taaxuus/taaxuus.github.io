@@ -443,6 +443,7 @@ productQuantityBtn.addEventListener('click', function (e) {
 // add all rows to a global list table from bigget % to lover %
 
 finalCardTable.style.display = 'none';
+globalListRefreshBtn.style.display = 'none';
 
 globalListBtn.addEventListener('click', function (e) {
 	allRows.sort(function (row1, row2) {
@@ -463,6 +464,7 @@ globalListBtn.addEventListener('click', function (e) {
 
 	globalListBtn.style.display = 'none';
 	finalCardTable.style.display = 'flex';
+	globalListRefreshBtn.style.display = 'block';
 });
 
 globalListRefreshBtn.addEventListener('click', function (e) {
