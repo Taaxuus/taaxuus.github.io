@@ -483,4 +483,19 @@ i:hover {
 
 .product__global__list--refresch--btn {
   margin-bottom: 2rem;
+}
+
+footer {
+  text-align: right;
+  margin-right: 1rem;
+  margin-bottom: 0.2em;
+}
+footer p {
+  color: white;
+  text-shadow: 1px 1px 8px rgb(1, 1, 1);
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=main.css.map */
