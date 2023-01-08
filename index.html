@@ -26,176 +26,192 @@
         </div>
     </header>
 
-    <section class="product">
-        <div class="wrapper">
-            <form class="product__info">
-                <label for="product__name" class="product__name">Nazwa Kremu</label>
-                <input type="text" name="product__name" id="product__name"
-                    placeholder="Tutaj wpisz nazwe swojego kremu">
+    <div class="main-container">
 
-                <div class="product__btn__list">
-                    <button class="btn product__name__btn">Zapisz</button>
-                    <button class="btn product__name__btn__modifier">Modyfikuj</button>
+
+
+
+
+
+
+
+
+        <section class="product">
+            <div class="wrapper">
+                <form class="product__info">
+                    <label for="product__name" class="product__name">Nazwa Kremu</label>
+                    <input type="text" name="product__name" id="product__name"
+                        placeholder="Tutaj wpisz nazwe swojego kremu">
+
+                    <div class="product__btn__list">
+                        <button class="btn product__name__btn">Zapisz</button>
+                        <button class="btn product__name__btn__modifier">Modyfikuj</button>
+                    </div>
+                    <label for="product__quantity" class="product__quantity">Ilosc twojego kremu</label>
+                    <input type="number" name="product__quantity" id="product__quantity"
+                        placeholder="Tutaj wpisz ilosc kremu w gramach">
+
+                    <div class="product__btn__list">
+                        <button class="btn product__quantity__btn">Zapisz</button>
+                        <button class="btn product__quantity__btn__modifier">Modyfikuj</button>
+                    </div>
+
+                    <h2 class="phases-title">Fazy produktu :</h2>
+
+                    <div class="product__checkbox__list">
+                        <button class="btn product__btn__phase">Faza Olejowa</button>
+                        <button class="btn product__btn__phase">Faza Wodna</button>
+                        <button class="btn product__btn__phase">Faza Dodatkowa</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <section class="phases">
+
+            <div class="wrapper">
+
+                <div class="phases__card phase1 active-d-none">
+                    <table class="card__table phase1__table">
+                        <h2>Faza Olejowa</h2>
+                        <thead>
+                            <tr>
+                                <th>Nazwa skladnika</th>
+                                <th>Ilosc w % </th>
+                                <th>Ilosc w gramach</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="phase1__add__window phases__card__add__window ">
+                        <label for="additem_name">Nazwa produktu</label>
+                        <input type="text" name="additem_name" id="additem__name-phase1" class="add__phase1__product">
+                        <label for="additem_quantity">Ilosc w %</label>
+                        <input type="number" name="additem_quantity" id="additem__quantity-phase1"
+                            class="add__phase1__product">
+                        <button class="btn phase1__add__window__calculate--btn ">Przelicz</button>
+                        <label for="result">Rezultat w gramach</label>
+                        <p class="phase1__add__window--result phases__window__result">0
+                        </p>
+                        <button class="phase1__add__window--btn btn ">Dodaj</button>
+                        <a href="" class="close-btn phase1__add__window__close--btn"><i
+                                class="fa-solid fa-xmark"></i></a>
+                    </div>
+                    <a href="" class="phases__card__btn--1">
+                        <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                    </a>
+
+                    <p class="phases__quantity">Ilosc fazy Olejowej : <span class="phase1__global__quantity"></span></p>
+
                 </div>
-                <label for="product__quantity" class="product__quantity">Ilosc twojego kremu</label>
-                <input type="number" name="product__quantity" id="product__quantity"
-                    placeholder="Tutaj wpisz ilosc kremu w gramach">
+                <div class="phases__card phase2 active-d-none">
+                    <table class="card__table phase2__table">
+                        <h2>Faza Wodna</h2>
+                        <thead>
+                            <tr>
+                                <th>Nazwa skladnika</th>
+                                <th>Ilosc w % </th>
+                                <th>Ilosc w gramach</th>
+                            </tr>
 
-                <div class="product__btn__list">
-                    <button class="btn product__quantity__btn">Zapisz</button>
-                    <button class="btn product__quantity__btn__modifier">Modyfikuj</button>
+                        </thead>
+                    </table>
+
+                    <div class="phase2__add__window phases__card__add__window ">
+                        <label for="additem_name">Nazwa produktu</label>
+                        <input type="text" name="additem_name" id="additem__name-phase2" class="add__phase2__product">
+                        <label for="additem_quantity">Ilosc w %</label>
+                        <input type="number" name="additem_quantity" id="additem__quantity-phase2"
+                            class="add__phase2__product">
+                        <button class="btn phase2__add__window__calculate--btn ">Przelicz</button>
+                        <label for="result">Rezultat w gramach</label>
+                        <p class="phase2__add__window--result phases__window__result">0
+                        </p>
+                        <button class="phase2__add__window--btn btn ">Dodaj</button>
+                        <a href="" class="close-btn phase2__add__window__close--btn"><i
+                                class="fa-solid fa-xmark"></i></a>
+                    </div>
+
+                    <a href="" class="phases__card__btn--2">
+                        <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                    </a>
+
+                    <p class="phases__quantity">Ilosc fazy Wodnej : <span class="phase2__global__quantity"></span></p>
+
                 </div>
-
-                <h2>Fazy produktu :</h2>
-
-                <div class="product__checkbox__list">
-                    <button class="btn product__btn__phase">Faza Olejowa</button>
-                    <button class="btn product__btn__phase">Faza Wodna</button>
-                    <button class="btn product__btn__phase">Faza Dodatkowa</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-
-    <section class="phases">
-
-        <div class="wrapper">
-
-            <div class="phases__card phase1 active-d-none">
-                <table class="card__table phase1__table">
-                    <h2>Faza Olejowa</h2>
-                    <thead>
-                        <tr>
-                            <th>Nazwa skladnika</th>
-                            <th>Ilosc w % </th>
-                            <th>Ilosc w gramach</th>
-                        </tr>
-                    </thead>
-                </table>
-                <div class="phase1__add__window phases__card__add__window ">
-                    <label for="additem_name">Nazwa produktu</label>
-                    <input type="text" name="additem_name" id="additem__name-phase1" class="add__phase1__product">
-                    <label for="additem_quantity">Ilosc w %</label>
-                    <input type="number" name="additem_quantity" id="additem__quantity-phase1"
-                        class="add__phase1__product">
-                    <button class="btn phase1__add__window__calculate--btn ">Przelicz</button>
-                    <label for="result">Rezultat w gramach</label>
-                    <p class="phase1__add__window--result phases__window__result">0
+                <div class="phases__card phase3 active-d-none">
+                    <table class="card__table phase3__table">
+                        <h2>Faza Dodatkowa</h2>
+                        <thead>
+                            <tr>
+                                <th>Nazwa skladnika</th>
+                                <th>Ilosc w % </th>
+                                <th>Ilosc w gramach</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="phase3__add__window phases__card__add__window ">
+                        <label for="additem_name">Nazwa produktu</label>
+                        <input type="text" name="additem_name" id="additem__name-phase3" class="add__phase3__product">
+                        <label for="additem_quantity">Ilosc w %</label>
+                        <input type="number" name="additem_quantity" id="additem__quantity-phase3"
+                            class="add__phase3__product">
+                        <button class="btn phase3__add__window__calculate--btn ">Przelicz</button>
+                        <label for="result">Rezultat w gramach</label>
+                        <p class="phase3__add__window--result phases__window__result">0
+                        </p>
+                        <button class="phase3__add__window--btn btn ">Dodaj</button>
+                        <a href="" class="close-btn phase3__add__window__close--btn"><i
+                                class="fa-solid fa-xmark"></i></a>
+                    </div>
+                    <a href="" class="phases__card__btn--3">
+                        <i class="fa-sharp fa-solid fa-circle-plus"></i>
+                    </a>
+                    <p class="phases__quantity">Ilosc fazy Dodatkowej : <span class="phase3__global__quantity"></span>
                     </p>
-                    <button class="phase1__add__window--btn btn ">Dodaj</button>
-                    <a href="" class="close-btn phase1__add__window__close--btn"><i class="fa-solid fa-xmark"></i></a>
-                </div>
-                <a href="" class="phases__card__btn--1">
-                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
-                </a>
-
-                <p class="phases__quantity">Ilosc fazy Olejowej : <span class="phase1__global__quantity"></span></p>
-
-            </div>
-            <div class="phases__card phase2 active-d-none">
-                <table class="card__table phase2__table">
-                    <h2>Faza Wodna</h2>
-                    <thead>
-                        <tr>
-                            <th>Nazwa skladnika</th>
-                            <th>Ilosc w % </th>
-                            <th>Ilosc w gramach</th>
-                        </tr>
-
-                    </thead>
-                </table>
-
-                <div class="phase2__add__window phases__card__add__window ">
-                    <label for="additem_name">Nazwa produktu</label>
-                    <input type="text" name="additem_name" id="additem__name-phase2" class="add__phase2__product">
-                    <label for="additem_quantity">Ilosc w %</label>
-                    <input type="number" name="additem_quantity" id="additem__quantity-phase2"
-                        class="add__phase2__product">
-                    <button class="btn phase2__add__window__calculate--btn ">Przelicz</button>
-                    <label for="result">Rezultat w gramach</label>
-                    <p class="phase2__add__window--result phases__window__result">0
-                    </p>
-                    <button class="phase2__add__window--btn btn ">Dodaj</button>
-                    <a href="" class="close-btn phase2__add__window__close--btn"><i class="fa-solid fa-xmark"></i></a>
                 </div>
 
-                <a href="" class="phases__card__btn--2">
-                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
-                </a>
-
-                <p class="phases__quantity">Ilosc fazy Wodnej : <span class="phase2__global__quantity"></span></p>
-
             </div>
-            <div class="phases__card phase3 active-d-none">
-                <table class="card__table phase3__table">
-                    <h2>Faza Dodatkowa</h2>
-                    <thead>
-                        <tr>
-                            <th>Nazwa skladnika</th>
-                            <th>Ilosc w % </th>
-                            <th>Ilosc w gramach</th>
-                        </tr>
-                    </thead>
-                </table>
-                <div class="phase3__add__window phases__card__add__window ">
-                    <label for="additem_name">Nazwa produktu</label>
-                    <input type="text" name="additem_name" id="additem__name-phase3" class="add__phase3__product">
-                    <label for="additem_quantity">Ilosc w %</label>
-                    <input type="number" name="additem_quantity" id="additem__quantity-phase3"
-                        class="add__phase3__product">
-                    <button class="btn phase3__add__window__calculate--btn ">Przelicz</button>
-                    <label for="result">Rezultat w gramach</label>
-                    <p class="phase3__add__window--result phases__window__result">0
-                    </p>
-                    <button class="phase3__add__window--btn btn ">Dodaj</button>
-                    <a href="" class="close-btn phase3__add__window__close--btn"><i class="fa-solid fa-xmark"></i></a>
+            <p class="product__sumOfAllPhases"><span class="sumOfAllPhases__value"></span>
+            </p>
+
+        </section>
+
+
+        <section class="product__list">
+            <div class="wrapper">
+                <button class="btn product__global__list--btn">Wygeneruj liste skladnikow kremu</button>
+                <button class="btn product__global__list--refresch--btn">Odswiez</button>
+
+
+
+
+                <div class="table__card phases__card__add__window">
+
+
+                    <table class="table__card__final__table">
+                        <h2>Lista produktow</h2>
+                        <thead>
+                            <tr>
+                                <th>Nazwa skladnika</th>
+                                <th>Ilosc w % </th>
+                                <th>Ilosc w gramach</th>
+                            </tr>
+                        </thead>
+                    </table>
+
                 </div>
-                <a href="" class="phases__card__btn--3">
-                    <i class="fa-sharp fa-solid fa-circle-plus"></i>
-                </a>
-                <p class="phases__quantity">Ilosc fazy Dodatkowej : <span class="phase3__global__quantity"></span></p>
-            </div>
-
-        </div>
-        <p class="product__sumOfAllPhases"><span class="sumOfAllPhases__value"></span>
-        </p>
-
-    </section>
-
-
-    <section class="product__list">
-        <div class="wrapper">
-            <button class="btn product__global__list--btn">Wygeneruj liste skladnikow kremu</button>
-            <button class="btn product__global__list--refresch--btn">Odswiez</button>
 
 
 
 
-            <div class="table__card phases__card__add__window">
-
-
-                <table class="table__card__final__table">
-                    <h2>Lista produktow</h2>
-                    <thead>
-                        <tr>
-                            <th>Nazwa skladnika</th>
-                            <th>Ilosc w % </th>
-                            <th>Ilosc w gramach</th>
-                        </tr>
-                    </thead>
-                </table>
 
             </div>
 
 
+        </section>
+    </div>
 
-
-
-        </div>
-
-
-    </section>
 
 
 

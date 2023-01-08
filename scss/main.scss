@@ -8,7 +8,11 @@
 	align-items: center;
 	display: flex;
 	height: 12vh;
-	font-size: 2.6rem;
+
+	h1 {
+		font-size: 4rem;
+		color: $white-color;
+	}
 }
 
 //Sections
@@ -16,7 +20,7 @@
 //Section 1 PRODUCT NAME
 
 .product {
-	background-color: $second-color;
+	// background-color: $second-color;
 
 	&__info {
 		display: flex;
@@ -139,7 +143,7 @@
 		margin-top: 1em;
 
 		span {
-			color: $black-color;
+			color: $white-color;
 			font-size: 1.5rem;
 		}
 	}
@@ -148,7 +152,7 @@
 // section 3 product list
 
 .product__list {
-	background-color: $second-color;
+	// background-color: $second-color;
 
 	.wrapper {
 		flex-direction: column;

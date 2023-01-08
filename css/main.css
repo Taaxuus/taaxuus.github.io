@@ -111,8 +111,22 @@ input {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   font-family: "Syne Mono", monospace;
-  background-color: #fefcf3;
+  background-image: url(../img/Cosmetics_bgc.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html {
@@ -122,6 +136,11 @@ html {
 label {
   font-size: 2rem;
   text-align: center;
+  color: #fbfafa;
+}
+
+h2 {
+  color: #b881a7;
 }
 
 input[type=checkbox] {
@@ -166,7 +185,7 @@ td {
 i {
   margin-top: 0.5em;
   font-size: 2.5rem;
-  color: #000;
+  color: #3b3c45;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -186,11 +205,14 @@ i:hover {
           justify-content: center;
   font-size: 1.3rem;
   padding: 0.5em 1em;
-  background-color: #f0dbdb;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #fbfafa;
   border-radius: 8px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  color: #fbfafa;
+  -webkit-box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
+  box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
 }
 .btn:hover {
   -webkit-box-shadow: 0 0 11px rgba(76, 73, 73, 0.2);
@@ -212,6 +234,22 @@ i:hover {
   display: none;
 }
 
+.main-container {
+  max-width: 1000px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.phases-title {
+  color: #fbfafa;
+}
+
 .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -220,12 +258,12 @@ i:hover {
   display: -ms-flexbox;
   display: flex;
   height: 12vh;
-  font-size: 2.6rem;
+}
+.header h1 {
+  font-size: 4rem;
+  color: #fbfafa;
 }
 
-.product {
-  background-color: #f5ebe0;
-}
 .product__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,7 +340,7 @@ i:hover {
   text-align: center;
   padding: 1.2rem;
   margin-top: 1rem;
-  background-color: white;
+  background-color: #fbfafa;
   border-radius: 4px;
 }
 .phases__card h2 {
@@ -367,13 +405,10 @@ i:hover {
   margin-top: 1em;
 }
 .phases .phases__quantity span {
-  color: #000;
+  color: #fbfafa;
   font-size: 1.5rem;
 }
 
-.product__list {
-  background-color: #f5ebe0;
-}
 .product__list .wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -388,7 +423,7 @@ i:hover {
   margin-top: 1em;
 }
 .product__list .table__card {
-  background-color: white;
+  background-color: #fbfafa;
 }
 .product__list .table__card h2 {
   font-size: 2rem;

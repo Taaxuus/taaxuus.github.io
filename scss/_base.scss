@@ -1,8 +1,15 @@
 @import 'colors';
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
 	font-family: 'Syne Mono', monospace;
-	background-color: $main-color;
+	background-image: url(../img/Cosmetics_bgc.png);
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 html {
@@ -12,6 +19,10 @@ html {
 label {
 	font-size: 2rem;
 	text-align: center;
+	color: $white-color;
+}
+h2 {
+	color: $third-color;
 }
 input[type='checkbox'] {
 	appearance: none;
@@ -54,7 +65,7 @@ td {
 i {
 	margin-top: 0.5em;
 	font-size: 2.5rem;
-	color: $black-color;
+	color: #3b3c45;
 	transition: all 0.3s;
 
 	&:hover {
@@ -68,10 +79,14 @@ i {
 	justify-content: center;
 	font-size: 1.3rem;
 	padding: 0.5em 1em;
-	background-color: $third-color;
-	border: none;
+	background-color: transparent;
+	border: 1px solid $white-color;
 	border-radius: 8px;
 	transition: all 0.3s;
+	color: $white-color;
+	-webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+	box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 
 	&:hover {
 		box-shadow: 0 0 11px rgba(76, 73, 73, 0.2);
@@ -87,4 +102,20 @@ i {
 
 .active-d-none {
 	display: none;
+}
+
+.main-container {
+	// height: 100%;
+	max-width: 1000px;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.phases-title {
+	color: $white-color;
 }
