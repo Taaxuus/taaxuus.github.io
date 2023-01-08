@@ -464,6 +464,7 @@ i:hover {
   gap: 2em;
 }
 .product__list .wrapper .product__global__list--btn {
+  margin-bottom: 1em;
   margin-top: 1em;
 }
 .product__list .table__card {

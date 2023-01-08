@@ -99,6 +99,10 @@ let globalProductSum = '';
 
 // all rows with data
 let allRows = [];
+//All final rows with data
+
+let allFinalRows = [];
+
 //name section functions
 const nameAdd = e => {
 	e.preventDefault();
@@ -460,6 +464,8 @@ globalListBtn.addEventListener('click', function (e) {
 		let globalListeEl = el.cloneNode(true);
 		globalListeEl.children[3].remove();
 		globalListTable.append(globalListeEl);
+		globalListeEl.classList.add('final_tr');
+		allFinalRows.push(globalListeEl);
 	});
 
 	globalListBtn.style.display = 'none';
@@ -468,8 +474,10 @@ globalListBtn.addEventListener('click', function (e) {
 });
 
 globalListRefreshBtn.addEventListener('click', function (e) {
-	globalListTable.forEach(el => {
-		globalListTable.removeChild(el);
+	let allGlobalListeTr = document.querySelectorAll('.final_tr');
+
+	allGlobalListeTr.forEach(el => {
+		el.remove();
 	});
 
 	allRows.sort(function (row1, row2) {
@@ -479,12 +487,9 @@ globalListRefreshBtn.addEventListener('click', function (e) {
 	});
 
 	allRows.forEach(el => {
-		console.log(el.cells[1].textContent);
-	});
-
-	allRows.forEach(el => {
 		let globalListeEl = el.cloneNode(true);
 		globalListeEl.children[3].remove();
+		globalListeEl.classList.add('final_tr');
 		globalListTable.append(globalListeEl);
 	});
 
