@@ -234,8 +234,14 @@ footer {
 		text-shadow: 1px 1px 8px rgb(1, 1, 1);
 	}
 	a {
-		text-decoration: none;
-		color: white;
+		text-decoration: none
+		color: #dc6ff6;
+		background-image: -webkit-linear-gradient(45deg, #dc6ff6 43%, #51f7ce 58%, #617ddd 83%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		text-fill-color: transparent;
+		-webkit-text-fill-color: transparent;
+
 		font-size: 1.1rem;
 	}
 }
