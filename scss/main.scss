@@ -2,6 +2,7 @@
 @import 'colors';
 @import 'mixins';
 @import 'base';
+@import 'media';
 
 //header
 .header {
@@ -24,14 +25,6 @@
 	p {
 		font-size: 2.3rem;
 		margin-bottom: 0.5em;
-
-		// CSS
-
-		// CSS
-
-		// CSS
-
-		// CSS
 		color: #da30e3;
 		background-image: -webkit-linear-gradient(45deg, #da30e3 9%, #cfac3a 55%, #8936d6 69%);
 		background-clip: text;
@@ -125,7 +118,7 @@
 		border-radius: 4px;
 
 		h2 {
-			font-size: 1.5rem;
+			font-size: 1.8em;
 			text-align: center;
 		}
 	}
@@ -192,8 +185,6 @@
 // section 3 product list
 
 .product__list {
-	// background-color: $second-color;
-
 	.wrapper {
 		flex-direction: column;
 		align-items: center;

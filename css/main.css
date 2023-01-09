@@ -181,6 +181,7 @@ tr {
 }
 
 th {
+  font-size: 1.6em;
   padding: 1rem;
   color: #fbfafa;
 }
@@ -192,6 +193,7 @@ th:last-child {
 }
 
 td {
+  font-size: 1.4em;
   padding: 1rem;
   min-width: 4em;
   color: #fbfafa;
@@ -404,7 +406,7 @@ i:hover {
   border-radius: 4px;
 }
 .phases__card h2 {
-  font-size: 1.5rem;
+  font-size: 1.8em;
   text-align: center;
 }
 .phases__card__add__window {
