@@ -259,7 +259,7 @@ i:hover {
 .main-container {
   max-width: 1000px;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0);
+  background: rgba(19, 19, 19, 0.222);
   border-radius: 16px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -281,9 +281,31 @@ i:hover {
   display: flex;
   height: 12vh;
 }
+.header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
 .header h1 {
   font-size: 4rem;
   color: #fbfafa;
+}
+.header p {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: #da30e3;
+  background-image: -webkit-linear-gradient(45deg, #da30e3 9%, #ecb810 55%, #8936d6 69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .product__info {
@@ -360,9 +382,6 @@ i:hover {
   margin-left: 1em;
 }
 
-.phases .sumOfAllPhases__value {
-  color: #fbfafa;
-}
 .phases .wrapper {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -373,7 +392,7 @@ i:hover {
   padding: 1.2rem;
   margin-top: 1rem;
   /* From https://css.glass */
-  background: rgba(10, 9, 9, 0.62);
+  background: rgba(10, 9, 9, 0.664);
   border-radius: 16px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
