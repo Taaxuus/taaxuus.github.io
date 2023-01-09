@@ -257,6 +257,7 @@ i:hover {
 }
 
 .main-container {
+  margin-top: 2em;
   max-width: 1000px;
   /* From https://css.glass */
   background: rgba(19, 19, 19, 0.222);
@@ -295,7 +296,8 @@ i:hover {
   gap: 2em;
 }
 .header h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+  margin-top: 0.4em;
   color: #fbfafa;
 }
 .header p {
