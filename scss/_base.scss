@@ -18,7 +18,7 @@ html {
 }
 
 label {
-	font-size: 2rem;
+	font-size: 2.7em;
 	text-align: center;
 	color: $white-color;
 }
@@ -96,7 +96,7 @@ i {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	font-family: 'Berkshire Swash', cursive;
 	padding: 0.5em 1em;
 	background: rgba(10, 9, 9, 0.29);
@@ -143,5 +143,6 @@ i {
 }
 
 .phases-title {
+	font-size: 2.7rem;
 	color: $white-color;
 }

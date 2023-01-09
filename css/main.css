@@ -134,7 +134,7 @@ html {
 }
 
 label {
-  font-size: 2rem;
+  font-size: 2.7em;
   text-align: center;
   color: #fbfafa;
 }
@@ -220,7 +220,7 @@ i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-family: "Berkshire Swash", cursive;
   padding: 0.5em 1em;
   background: rgba(10, 9, 9, 0.29);
@@ -272,6 +272,7 @@ i:hover {
 }
 
 .phases-title {
+  font-size: 2.7rem;
   color: #fbfafa;
 }
 
@@ -345,7 +346,7 @@ i:hover {
   gap: 2em;
 }
 .product h2 {
-  font-size: 2rem;
+  font-size: 2.7rem;
 }
 .product__checkbox__list {
   display: -webkit-box;
