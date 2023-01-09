@@ -88,6 +88,11 @@ const phase3GlobalQuantity = document.querySelector('.phase3__global__quantity')
 
 const finalCardTable = document.querySelector('#final-table');
 
+//all added product quantity set on "0" by default
+phase1AddedProcuctQUantity.value = 0;
+phase2AddedProcuctQUantity.value = 0;
+phase3AddedProcuctQUantity.value = 0;
+
 //The amout of ptoduct
 let globalQuantity = '';
 // sum per phase
@@ -199,7 +204,7 @@ const phase1AddNewProduct = e => {
 	});
 
 	let cellResult = document.createElement('td');
-	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity.toFixed(2)} gr`;
+	cellResult.innerText = `${((phase1Inputs[1].value / 100) * globalQuantity).toFixed(2)} gr`;
 	//DLT button for each added element
 	let cellTrash = document.createElement('i');
 	cellTrash.className = `fa-solid fa-delete-left`;
@@ -244,7 +249,7 @@ document.addEventListener('click', function (e) {
 		} else if (globalProductSum === 100) {
 			sumOfAllPhases.style.color = 'green';
 		} else {
-			sumOfAllPhases.style.color = 'black';
+			sumOfAllPhases.style.color = 'white';
 		}
 		e.target.closest('tr').remove();
 		allRows.pop();
@@ -304,7 +309,7 @@ const phase2AddNewProduct = e => {
 	} else if (globalProductSum === 100) {
 		sumOfAllPhases.style.color = 'green';
 	} else {
-		sumOfAllPhases.style.color = 'black';
+		sumOfAllPhases.style.color = 'white';
 	}
 
 	allRows.push(row);
@@ -329,7 +334,7 @@ document.addEventListener('click', function (e) {
 		} else if (globalProductSum === 100) {
 			sumOfAllPhases.style.color = 'green';
 		} else {
-			sumOfAllPhases.style.color = 'black';
+			sumOfAllPhases.style.color = 'white';
 		}
 		e.target.closest('tr').remove();
 		allRows.pop();
@@ -390,7 +395,7 @@ const phase3AddNewProduct = e => {
 	} else if (globalProductSum === 100) {
 		sumOfAllPhases.style.color = 'green';
 	} else {
-		sumOfAllPhases.style.color = 'black';
+		sumOfAllPhases.style.color = 'white';
 	}
 
 	allRows.push(row);
@@ -416,7 +421,7 @@ document.addEventListener('click', function (e) {
 		} else if (globalProductSum === 100) {
 			sumOfAllPhases.style.color = 'green';
 		} else {
-			sumOfAllPhases.style.color = 'black';
+			sumOfAllPhases.style.color = 'white';
 		}
 		e.target.closest('tr').remove();
 		allRows.pop();
