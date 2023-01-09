@@ -1,2 +1,6 @@
-# Receptariusz
-Strona do tworzenia receptur 
+# ReciptCalc
+PL
+ReciptCalc to narzędzie przeznaczone dla osób tworzących receptury kosmetyków, które umożliwia łatwe obliczanie udziału poszczególnych składników w danej recepturze. Program pozwala na wprowadzenie nazwy kosmetyku oraz jego całkowitej ilości w gramach, a następnie umożliwia dodawanie składników do trzech faz: olejowej, wodnej i dodatkowej, podając ich procentowy udział w recepturze. Automatycznie oblicza on ilość każdego ze składników w gramach, w zależności od całkowitej ilości kosmetyku, a na końcu generuje listę składników od największej do najmniejszej ilości. Dzięki ReciptCalc, tworzenie receptur kosmetyków staje się łatwiejsze i bardziej precyzyjne.
+
+ENG
+ReceptCalc is a tool for people who create cosmetics recipes, which allows for easy calculation of the proportion of each ingredient in a given recipe. The program allows you to enter the name of the cosmetic and its total amount in grams, and then allows you to add ingredients to three phases: oil, water, and additional, specifying their percentage share in the recipe. It automatically calculates the amount of each ingredient in grams, depending on the total amount of the cosmetic, and finally generates a list of ingredients from the largest to the smallest amount. With ReceptCalc, creating cosmetics recipes becomes easier and more precise.
