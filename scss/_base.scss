@@ -101,9 +101,6 @@ i {
 	padding: 0.5em 1em;
 	background: rgba(10, 9, 9, 0.29);
 	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(10, 9, 9, 0.3);
 	border: 1px solid $white-color;
 	border-radius: 8px;
@@ -145,4 +142,5 @@ i {
 .phases-title {
 	font-size: 2.7rem;
 	color: $white-color;
+	margin-bottom: 0.2em;
 }

@@ -136,15 +136,15 @@ html {
 label {
   font-size: 2.7em;
   text-align: center;
-  color: #fbfafa;
+  color: #ffffff;
 }
 
 h2 {
-  color: #fbfafa;
+  color: #ffffff;
 }
 
 p {
-  color: #fbfafa;
+  color: #ffffff;
 }
 
 input[type=checkbox] {
@@ -162,11 +162,11 @@ input[type=checkbox]:checked {
 }
 
 span {
-  color: #fbfafa;
+  color: #ffffff;
 }
 
 input {
-  background-color: #fbfafa;
+  background-color: #ffffff;
   border-radius: 30px;
 }
 
@@ -177,13 +177,13 @@ thead {
 }
 
 tr {
-  border-bottom: 1px solid #fbfafa;
+  border-bottom: 1px solid #ffffff;
 }
 
 th {
   font-size: 1.6em;
   padding: 1rem;
-  color: #fbfafa;
+  color: #ffffff;
 }
 th:first-child {
   padding-left: 0;
@@ -196,13 +196,13 @@ td {
   font-size: 1.4em;
   padding: 1rem;
   min-width: 4em;
-  color: #fbfafa;
+  color: #ffffff;
 }
 
 i {
   margin-top: 0.5em;
   font-size: 2.5rem;
-  color: #fbfafa;
+  color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -225,16 +225,12 @@ i:hover {
   padding: 0.5em 1em;
   background: rgba(10, 9, 9, 0.29);
   border-radius: 16px;
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(10, 9, 9, 0.3);
-  border: 1px solid #fbfafa;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: #fbfafa;
+  color: #ffffff;
   -webkit-box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
   box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
 }
@@ -273,7 +269,8 @@ i:hover {
 
 .phases-title {
   font-size: 2.7rem;
-  color: #fbfafa;
+  color: #ffffff;
+  margin-bottom: 0.2em;
 }
 
 .header {
@@ -301,7 +298,7 @@ i:hover {
 .header h1 {
   font-size: 5rem;
   margin-top: 0.6em;
-  color: #fbfafa;
+  color: #ffffff;
 }
 .header p {
   font-size: 2.3rem;
@@ -380,7 +377,7 @@ i:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #fbfafa;
+  color: #ffffff;
 }
 .product__sumOfAllPhases span {
   font-size: 2rem;
@@ -474,7 +471,7 @@ i:hover {
   margin-top: 1em;
 }
 .phases .phases__quantity span {
-  color: #fbfafa;
+  color: #ffffff;
   font-size: 1.5rem;
 }
 
