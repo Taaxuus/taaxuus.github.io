@@ -119,7 +119,7 @@ const nameAdd = e => {
 		productNameText.style.color = '';
 		productNameBtn.style.display = 'none';
 	} else {
-		productNameText.textContent = 'Prosze wpisac nazwe kremu';
+		productNameText.textContent = 'Prosze wpisac nazwe';
 		productNameText.style.color = 'red';
 	}
 };
@@ -139,7 +139,7 @@ const quantityAdd = e => {
 	e.preventDefault();
 
 	if (productQuantityInput.value !== '') {
-		productQuantityText.textContent = `${productQuantityInput.value} gramow`;
+		productQuantityText.textContent = `${productQuantityInput.value} gr`;
 		globalQuantity = productQuantityInput.value;
 		productQuantityInput.value = '';
 		productQuantityText.style.color = '';
@@ -511,30 +511,30 @@ globalListRefreshBtn.addEventListener('click', function (e) {
 
 // /Funkcje cookie
 
-function getCookie(name) {
-	let value = '; ' + document.cookie;
-	let parts = value.split('; ' + name + '=');
-	if (parts.length == 2) {
-		return parts.pop().split(';').shift();
-	}
-}
+// function getCookie(name) {
+// 	let value = '; ' + document.cookie;
+// 	let parts = value.split('; ' + name + '=');
+// 	if (parts.length == 2) {
+// 		return parts.pop().split(';').shift();
+// 	}
+// }
 
-function setCookie(name, value, days) {
-	let date = new Date();
-	date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-	let expires = 'expires=' + date.toUTCString();
-	document.cookie = name + '=' + value + ';' + expires + ';path=/';
-}
+// function setCookie(name, value, days) {
+// 	let date = new Date();
+// 	date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+// 	let expires = 'expires=' + date.toUTCString();
+// 	document.cookie = name + '=' + value + ';' + expires + ';path=/';
+// }
 
-let numbersOfVisits = document.querySelector('.numbersOfVisits');
+// let numbersOfVisits = document.querySelector('.numbersOfVisits');
 
-if (getCookie('odwiedziny') === '') {
-	// Jeśli nie istnieje, utwórz je i ustaw wartość na 1
-	setCookie('odwiedziny', 1, 365);
-} else {
-	// Jeśli ciasteczko istnieje, zwiększ jego wartość o 1
-	let odwiedziny = getCookie('odwiedziny');
-	odwiedziny++;
-	setCookie('odwiedziny', odwiedziny, 365);
-}
-document.write('Liczba odwiedzin: ' + getCookie('odwiedziny'));
+// if (getCookie('odwiedziny') === '') {
+// 	// Jeśli nie istnieje, utwórz je i ustaw wartość na 1
+// 	setCookie('odwiedziny', 1, 365);
+// } else {
+// 	// Jeśli ciasteczko istnieje, zwiększ jego wartość o 1
+// 	let odwiedziny = getCookie('odwiedziny');
+// 	odwiedziny++;
+// 	setCookie('odwiedziny', odwiedziny, 365);
+// }
+// document.write('Liczba odwiedzin: ' + getCookie('odwiedziny'));
