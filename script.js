@@ -199,7 +199,7 @@ const phase1AddNewProduct = e => {
 	});
 
 	let cellResult = document.createElement('td');
-	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity} gr`;
+	cellResult.innerText = `${(phase1Inputs[1].value / 100) * globalQuantity.toFixed(2)} gr`;
 	//DLT button for each added element
 	let cellTrash = document.createElement('i');
 	cellTrash.className = `fa-solid fa-delete-left`;
