@@ -127,7 +127,7 @@ const nameAdd = e => {
 const nameModifier = e => {
 	e.preventDefault();
 
-	productNameText.textContent = `Nazwa Kremu`;
+	productNameText.textContent = `Nazwa`;
 	productNameInput.style.display = '';
 	productNameInput.value = '';
 	productNameText.style.color = '';
@@ -146,7 +146,7 @@ const quantityAdd = e => {
 		productQuantityInput.style.display = 'none';
 		productQuantityBtn.style.display = 'none';
 	} else {
-		productQuantityText.textContent = 'Prosze wpisac ilosc kremu';
+		productQuantityText.textContent = 'Prosze wpisac Ilość';
 		productQuantityText.style.color = 'red';
 	}
 };
@@ -154,7 +154,7 @@ const quantityAdd = e => {
 const quantityModifier = e => {
 	e.preventDefault();
 
-	productQuantityText.textContent = `Ilosc twojego kremu`;
+	productQuantityText.textContent = `Ilość `;
 	productQuantityInput.style.display = '';
 	productQuantityInput.value = '';
 	productQuantityText.style.color = '';
